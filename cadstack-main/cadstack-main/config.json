@@ -1,0 +1,49 @@
+{
+  "default_platform": "freecad",
+  "output_directory": "~/.claude/skills/cadstack/output",
+  "default_format": "step",
+  "units": "mm",
+  "platforms": {
+    "freecad": {
+      "enabled": true,
+      "headless": true,
+      "python_path": null
+    },
+    "autocad": {
+      "enabled": false,
+      "require_running": true
+    },
+    "solidworks": {
+      "enabled": false,
+      "require_running": true
+    },
+    "fusion360": {
+      "enabled": false,
+      "port": 8080,
+      "timeout": 30
+    }
+  },
+  "export": {
+    "step": {
+      "extension": ".step",
+      "description": "STEP AP214 (ISO 10303)"
+    },
+    "stl": {
+      "extension": ".stl",
+      "description": "STL Mesh (ASCII/Binary)",
+      "ascii": false,
+      "mesh_tolerance": 0.1
+    },
+    "obj": {
+      "extension": ".obj",
+      "description": "Wavefront OBJ"
+    }
+  },
+  "validation": {
+    "dimension_tolerance": 0.01,
+    "position_tolerance": 0.01,
+    "angle_tolerance": 0.1,
+    "check_manifold": true,
+    "check_self_intersection": true
+  }
+}

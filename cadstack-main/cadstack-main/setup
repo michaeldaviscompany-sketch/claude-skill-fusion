@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""
+CAD Automation Skill Pack - Setup Script
+Installs dependencies and configures the skill pack.
+"""
+
+import subprocess
+import sys
+from pathlib import Path
+
+def main():
+    skill_dir = Path(__file__).parent
+
+    print("=" * 50)
+    print("CAD Automation Skill Pack - Setup")
+    print("=" * 50)
+
+    # Check Python version
+    if sys.version_info < (3, 10):
+        print("ERROR: Python 3.10+ required")
+        sys.exit(1)
+    print(f"[OK] Python {sys.version_info.major}.{sys.version_info.minor}")
+
+    # Install core dependencies
+    print("\nInstalling core dependencies...")
+    deps = ["typer>=0.12.0", "rich>=13.0.0", "pydantic>=2.0.0"]
+    subprocess.run([sys.executable, "-m", "pip", "install", *deps], check=True)
+
+    # Windows-specific dependencies
+    if sys.platform == "win32":
+        print("\nInstalling Windows-specific dependencies...")
+        win_deps = ["pywin32>=306"]
+        subprocess.run([sys.executable, "-m", "pip", "install", *win_deps], check=True)
+
+    # Check FreeCAD
+    print("\nChecking CAD platforms...")
+    try:
+        import FreeCAD
+        print(f"[OK] FreeCAD available: {FreeCAD.Version()}")
+    except ImportError:
+        print("[INFO] FreeCAD not in Python path")
+        print("       Install FreeCAD or add to PYTHONPATH")
+
+    # Check AutoCAD (Windows only)
+    if sys.platform == "win32":
+        try:
+            import win32com.client
+            print("[OK] pywin32 available for AutoCAD/SolidWorks")
+        except ImportError:
+            print("[WARN] pywin32 not available - AutoCAD/SolidWorks disabled")
+
+    # Create output directory
+    output_dir = skill_dir / "output"
+    output_dir.mkdir(exist_ok=True)
+    print(f"\n[OK] Output directory: {output_dir}")
+
+    print("\n" + "=" * 50)
+    print("Setup complete!")
+    print("=" * 50)
+    print("\nUsage:")
+    print('  /cad "Create a 50mm cube"')
+    print("  /cad-config --check freecad")
+    print("\nAdd to CLAUDE.md:")
+    print("  ## cadstack")
+    print("  Default platform: freecad")
+
+if __name__ == "__main__":
+    main()
