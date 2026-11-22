@@ -1,0 +1,74 @@
+[
+  {
+    "query": "i want to split this refactor across a few agents working in parallel — how should i divide the repo so they dont step on each other",
+    "should_trigger": true
+  },
+  {
+    "query": "spawn some subagents to build the API, the frontend, and the test suite at the same time. coordinate them properly",
+    "should_trigger": true
+  },
+  {
+    "query": "my background agent says it finished the migration and all tests pass, should i just merge it?",
+    "should_trigger": true
+  },
+  {
+    "query": "the agent i had running overnight died from a session limit halfway through writing the docs. whats the right way to pick this back up",
+    "should_trigger": true
+  },
+  {
+    "query": "planning a big pipeline: research phase, then codegen, then review. which model should run each stage — opus everywhere seems wasteful",
+    "should_trigger": true
+  },
+  {
+    "query": "two of my agents both edited config.yaml and now its mangled. how do i stop this happening again",
+    "should_trigger": true
+  },
+  {
+    "query": "requirements changed while my builder agent is mid-task — do i kill it and restart or can i redirect it",
+    "should_trigger": true
+  },
+  {
+    "query": "before i let the render farm run for 6 hours on these assets, what should i check from the modeling agent's output",
+    "should_trigger": true
+  },
+  {
+    "query": "how do i structure a long task so that if the agent dies partway, the next session can continue without me re-explaining everything",
+    "should_trigger": true
+  },
+  {
+    "query": "write a prompt for a customer support chatbot, friendly tone, handles refunds",
+    "should_trigger": false
+  },
+  {
+    "query": "whats the context window of opus vs sonnet and which is cheaper per token",
+    "should_trigger": false
+  },
+  {
+    "query": "build me a langchain RAG pipeline over our docs folder",
+    "should_trigger": false
+  },
+  {
+    "query": "my CI pipeline has stages that need to run in order with artifacts passed between jobs — fix my github actions yaml",
+    "should_trigger": false
+  },
+  {
+    "query": "the kubernetes orchestrator keeps restarting my pods, logs say OOMKilled",
+    "should_trigger": false
+  },
+  {
+    "query": "can you review this PR yourself, its a small change to the auth middleware",
+    "should_trigger": false
+  },
+  {
+    "query": "set up a cron job that runs the backup script nightly and emails me if it fails",
+    "should_trigger": false
+  },
+  {
+    "query": "explain how anthropic's agent SDK handles tool permissions",
+    "should_trigger": false
+  },
+  {
+    "query": "i need a state machine for my order-processing workflow in temporal",
+    "should_trigger": false
+  }
+]

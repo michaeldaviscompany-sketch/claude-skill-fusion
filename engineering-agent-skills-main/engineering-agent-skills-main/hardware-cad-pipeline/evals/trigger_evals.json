@@ -1,0 +1,82 @@
+[
+  {
+    "query": "i need to design a replacement knob for my washing machine, the shaft is like 6mm with a flat side. want to 3d print it. can you model it",
+    "should_trigger": true
+  },
+  {
+    "query": "Model a GoPro-style mount adapter that clips onto a 31.8mm handlebar — I'll print it in PETG on my Bambu. Needs to actually clamp tight.",
+    "should_trigger": true
+  },
+  {
+    "query": "can you measure this STL i downloaded from printables? twistlock_mount_v3.stl in my downloads. I need the lug spacing and the bore diameter before I design the mating part",
+    "should_trigger": true
+  },
+  {
+    "query": "I have Fusion open — connect to it and import the STEP file in ~/cad/out/bracket.step, then render it",
+    "should_trigger": true
+  },
+  {
+    "query": "write me a build123d script for a 22mm conical connector with a 1:40 taper and a 2.5mm wall",
+    "should_trigger": true
+  },
+  {
+    "query": "turn these renders into a proper product shot — the enclosure GLB is at assets/enclosure.glb, I want a turntable sequence for the website hero",
+    "should_trigger": true
+  },
+  {
+    "query": "my printed parts never fit together, the peg is 8mm and the hole is 8mm and it just jams. how should i be doing this properly",
+    "should_trigger": true
+  },
+  {
+    "query": "quick openscad sketch of an electronics enclosure, 90x60x25 internal, snap lid, vents on one side",
+    "should_trigger": true
+  },
+  {
+    "query": "before I get this bracket CNC'd — anything about the geometry a machine shop will complain about? internal corners etc",
+    "should_trigger": true
+  },
+  {
+    "query": "the STEP export from my script looks fine in the viewer but the manufacturer says the bore is undersized. how do i check whats actually in the file",
+    "should_trigger": true
+  },
+  {
+    "query": "sculpt me a low-poly wolf character for my game, needs to be rigged later in blender",
+    "should_trigger": false
+  },
+  {
+    "query": "make a 3d bar chart of our quarterly sales, exportable as PNG for the deck",
+    "should_trigger": false
+  },
+  {
+    "query": "design a logo for my hardware startup, something geometric and triangular",
+    "should_trigger": false
+  },
+  {
+    "query": "can you convert this blender donut tutorial file to fbx for unity",
+    "should_trigger": false
+  },
+  {
+    "query": "whats the difference between fusion 360 personal and education licenses, thinking about which to get",
+    "should_trigger": false
+  },
+  {
+    "query": "render this markdown table as a nice image i can paste into slack",
+    "should_trigger": false
+  },
+  {
+    "query": "i want a 3d rotating product viewer on my shopify store, like three.js — set that up",
+    "should_trigger": false
+  },
+  {
+    "query": "animate my character mesh walking, the armature is already set up in blender",
+    "should_trigger": false
+  },
+  {
+    "query": "print this PDF datasheet double sided",
+    "should_trigger": false
+  },
+  {
+    "query": "our dashboard needs a gauge widget that looks 3d, css only",
+    "should_trigger": false
+  }
+]
